@@ -1,0 +1,7 @@
+const TelegramBot = require('node-telegram-bot-api');
+const token = 'YOUR_TOKEN'; // 8411201443:AAF81a6siR6mS2lzM88SMjP9S0uAt1gC0zE
+const bot = new TelegramBot(token, {polling: true});
+
+bot.onText(/\/سعر/, (msg) => {
+  bot.sendMessage(msg.chat.id, "سعر الذهب اليوم في دبي: 245 درهم (عيار 24)");
+});
